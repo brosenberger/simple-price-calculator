@@ -2,7 +2,7 @@
   <md-list>
     <template v-for="price in priceList">
       <md-list-item>
-        <span>{{price.title}}</span><md-icon @click.native="remove(price.id)">delete</md-icon>
+        <span>{{price.title}} ({{price.quantity}})</span><md-icon @click.native="remove(price.id)">delete</md-icon>
       </md-list-item>
     </template>
   </md-list>
@@ -31,4 +31,7 @@
 </script>
 
 <style scoped>
+  .md-icon {
+    cursor: pointer;
+  }
 </style>

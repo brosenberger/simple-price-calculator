@@ -8,7 +8,7 @@
       <md-card-media></md-card-media>
     </md-card-header>
     <md-card-actions>
-      <md-button v-on:click.native="callAdd(price.id)">Hinzufügen</md-button>
+      <md-button v-on:click.native="callAdd(price.id)" md-primary>Hinzufügen</md-button>
     </md-card-actions>
   </md-card>
 </template>
@@ -34,4 +34,8 @@
 </script>
 
 <style scoped>
+  .card-layout .md-card .md-card-header {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
 </style>
