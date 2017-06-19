@@ -8,7 +8,7 @@
       <md-card-media></md-card-media>
     </md-card-header>
     <md-card-actions>
-      <md-button v-on:click="callAdd(1)">Hinzufügen</md-button>
+      <md-button v-on:click.native="callAdd(price.id)">Hinzufügen</md-button>
     </md-card-actions>
   </md-card>
 </template>
@@ -22,12 +22,12 @@
       }
     },
     data () {
-      return {}
+      return {
+      }
     },
     methods: {
       callAdd: function (event) {
-        alert('irgendwas')
-        window.alert(this.price.id + ' clicked')
+        this.$emit('addprice', event)
       }
     }
   }

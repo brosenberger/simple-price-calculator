@@ -1,9 +1,10 @@
 <template>
-  <md-layout>
+  <md-layout md-gutter>
     <price-card
       v-for="price in priceList"
       :key="price.id"
       :price="price"
+      v-on:addprice="callAdd"
     ></price-card>
   </md-layout>
 </template>
@@ -24,8 +25,10 @@
     data () {
       return {}
     },
-    callAdd (id) {
-      window.alert(id + ' clicked')
+    methods: {
+      callAdd (id) {
+        this.$emit('addprice', id)
+      }
     }
   }
 </script>
